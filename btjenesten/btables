@@ -1,0 +1,59 @@
+import ipywidgets as widgets
+
+class tablewidget():
+    """
+    Tabular in/out for Box-Behnken widget
+    Author: Audun Skau Hansen, 2022
+    """
+    def __init__(self, column_headers, row_headers):
+        self.tab = np.zeros((len(row_headers)+1,len(column_headers)+1), dtype = object)
+        self.tab[1:,0] = row_headers
+        self.tab[0,1:] = column_headers
+        
+        self.tab[0,0] = widgets.Label("")
+        
+        for i in range(len(column_headers)):
+            self.tab[0, i+1] = widgets.Label(column_headers[i], align = "right")
+        for j in range(len(row_headers)):
+            self.tab[j+1, 0] = widgets.Label(row_headers[j], align = "center")
+        
+        self.items = []
+        for i in range(len(row_headers)):
+            for j in range(len(column_headers)):
+                self.tab[i+1,j+1] = widgets.BoundedFloatText(
+                                        value=0,
+                                        min=-1e15,
+                                        max=1e15,
+                                        step=0.1,
+                                        description='',
+                                        disabled=False
+                                    )
+                
+        
+        self.widget = widgets.GridBox(list(self.tab.ravel()), layout=widgets.Layout(grid_template_columns="repeat(%i, 100px)" % (len(column_headers)+1)))
+        
+    def as_numpy_array(self):
+        """
+        Get numpy array from tabular values
+        """
+        ret = np.zeros(self.tab[1:,1:].shape, dtype = float)
+        for i in range(self.tab.shape[0]-1):
+            for j in range(self.tab.shape[1]-1):
+                ret[i,j] = float(self.tab[i+1,j+1].value)
+        return ret
+    
+    def set_from_array(self, input_array):
+        """
+        Set tabular values from input array
+        """
+        for i in range(self.tab.shape[0]):
+            for j in range(self.tab.shape[1]):
+                self.tab[i,j].valueu = input_array[i,j]
+                
+                
+    
+    def _repr(self):
+        """
+        
+        """
+        return self.widget
