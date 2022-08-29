@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="https://raw.githubusercontent.com/audunsh/btjenesten/master/graphics/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
     
     
       
@@ -17,7 +17,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
@@ -42,7 +42,7 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gaussian-process-regression-tools-gpr" class="md-skip">
+        <a href="#gpr" class="md-skip">
           Skip to content
         </a>
       
@@ -290,6 +290,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           gpr
@@ -306,19 +308,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#gaussian-process-regression-tools-gpr" class="md-nav__link">
-    Gaussian Process Regression tools (gpr)
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#btjenesten.gpr" class="md-nav__link">
@@ -356,6 +353,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#btjenesten.gpr.Regressor.aquisition" class="md-nav__link">
+    aquisition()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#btjenesten.gpr.Regressor.predict" class="md-nav__link">
     predict()
   </a>
@@ -369,8 +373,36 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#btjenesten.gpr.Regressor.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#btjenesten.gpr.no_normalization" class="md-nav__link">
+    no_normalization()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#btjenesten.gpr.normalize_training_data_x" class="md-nav__link">
+    normalize_training_data_x()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#btjenesten.gpr.normalize_training_data_x_log" class="md-nav__link">
+    normalize_training_data_x_log()
+  </a>
   
 </li>
       
@@ -411,6 +443,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis-reference/" class="md-nav__link">
+        analysis
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -434,19 +480,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#gaussian-process-regression-tools-gpr" class="md-nav__link">
-    Gaussian Process Regression tools (gpr)
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#btjenesten.gpr" class="md-nav__link">
@@ -484,6 +525,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#btjenesten.gpr.Regressor.aquisition" class="md-nav__link">
+    aquisition()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#btjenesten.gpr.Regressor.predict" class="md-nav__link">
     predict()
   </a>
@@ -497,8 +545,36 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#btjenesten.gpr.Regressor.update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#btjenesten.gpr.no_normalization" class="md-nav__link">
+    no_normalization()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#btjenesten.gpr.normalize_training_data_x" class="md-nav__link">
+    normalize_training_data_x()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#btjenesten.gpr.normalize_training_data_x_log" class="md-nav__link">
+    normalize_training_data_x_log()
+  </a>
   
 </li>
       
@@ -544,19 +620,19 @@
                 
 
 
-  <h1>gpr</h1>
+<h1 id="gpr">gpr</h1>
+<p><strong>Author</strong>: Christian Elias Anderssen Dalan <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>,</p>
+<p>With the help of Audun Skau Hansen <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#46;&#115;&#46;&#104;&#97;&#110;&#115;&#101;&#110;&#64;&#107;&#106;&#101;&#109;&#105;&#46;&#117;&#105;&#111;&#46;&#110;&#111;">&#97;&#46;&#115;&#46;&#104;&#97;&#110;&#115;&#101;&#110;&#64;&#107;&#106;&#101;&#109;&#105;&#46;&#117;&#105;&#111;&#46;&#110;&#111;</a></p>
+<p>April 2022</p>
 
-<h2 id="gaussian-process-regression-tools-gpr">Gaussian Process Regression tools (gpr)</h2>
-<p>This module was developed by Elias Dalan in spring 2022.</p>
 
+<div class="doc doc-object doc-module">
 
-  <div class="doc doc-object doc-module">
 
 <a id="btjenesten.gpr"></a>
-    <div class="doc doc-contents first">
+  <div class="doc doc-contents first">
 
-
-
+  
 
   <div class="doc doc-children">
 
@@ -566,27 +642,103 @@
 
 
 
-  <div class="doc doc-object doc-class">
+
+<div class="doc doc-object doc-class">
 
 
 
-<h2 class="doc doc-heading" id="btjenesten.gpr.Kernel">
-        <code>
-Kernel        </code>
-
+<h2 id="btjenesten.gpr.Kernel" class="doc doc-heading">
+        <code>Kernel</code>
 
 
 </h2>
 
-    <div class="doc doc-contents ">
 
-      <p>Kernel class </p>
+  <div class="doc doc-contents ">
+
+  
+      <p>Kernel class 
+Author: Christian Elias Anderssen Dalan <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
       <hr />
 <p>covariance_function:
 The function that will be used to calculate the covariance between our datasets</p>
 
 
+        <details class="quote">
+          <summary>Source code in <code>btjenesten/gpr.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Kernel</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Kernel class </span>
+<span class="sd">    Author: Christian Elias Anderssen Dalan &lt;ceadyy@gmail.com&gt;</span>
 
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+<span class="sd">    covariance_function:</span>
+<span class="sd">    The function that will be used to calculate the covariance between our datasets</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">covariance_function</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">covariance_function</span> <span class="o">=</span> <span class="n">covariance_function</span>
+
+    <span class="k">def</span> <span class="nf">K</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Function that returns the covariance matrix given our datasets</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">        -----------</span>
+<span class="sd">        X1: Dataset 1 (Often the training set)</span>
+
+<span class="sd">        X2: Dataset 2 (Often the target set)</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">        ----------</span>
+<span class="sd">        self.covariance_function(X1, X2) : covariance matrix given our datasets X1 and X2.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isscalar</span><span class="p">(</span><span class="n">X1</span><span class="p">):</span>
+            <span class="n">X1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">X1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isscalar</span><span class="p">(</span><span class="n">X2</span><span class="p">):</span>
+            <span class="n">X2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">X2</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">covariance_function</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
 
   <div class="doc doc-children">
 
@@ -598,18 +750,18 @@ The function that will be used to calculate the covariance between our datasets<
 
 
 
-  <div class="doc doc-object doc-method">
+<div class="doc doc-object doc-function">
 
 
 
-<h3 class="doc doc-heading" id="btjenesten.gpr.Kernel.K">
-<code class="highlight language-python"><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">)</span></code>
-
+<h3 id="btjenesten.gpr.Kernel.K" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">K</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span></code>
 
 </h3>
 
-    <div class="doc doc-contents ">
 
+  <div class="doc doc-contents ">
+  
       <p>Function that returns the covariance matrix given our datasets</p>
       <hr />
 <p>X1: Dataset 1 (Often the training set)</p>
@@ -617,9 +769,28 @@ The function that will be used to calculate the covariance between our datasets<
       <hr />
 <p>self.covariance_function(X1, X2) : covariance matrix given our datasets X1 and X2.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>btjenesten/gpr.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">K</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">):</span>
+      <details class="quote">
+        <summary>Source code in <code>btjenesten/gpr.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">K</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Function that returns the covariance matrix given our datasets</span>
 
@@ -633,42 +804,42 @@ The function that will be used to calculate the covariance between our datasets<
 <span class="sd">    ----------</span>
 <span class="sd">    self.covariance_function(X1, X2) : covariance matrix given our datasets X1 and X2.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isscalar</span><span class="p">(</span><span class="n">X1</span><span class="p">):</span>
+        <span class="n">X1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">X1</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isscalar</span><span class="p">(</span><span class="n">X2</span><span class="p">):</span>
+        <span class="n">X2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">X2</span><span class="p">])</span>
 
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">covariance_function</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">)</span>
-</code></pre></div>
-        </details>
-    </div>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">covariance_function</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
 
   </div>
 
-
-
-
-
-
   </div>
 
-    </div>
+</div>
 
-  </div>
-
-
-
-  <div class="doc doc-object doc-class">
+<div class="doc doc-object doc-class">
 
 
 
-<h2 class="doc doc-heading" id="btjenesten.gpr.Regressor">
-        <code>
-Regressor        </code>
-
+<h2 id="btjenesten.gpr.Regressor" class="doc doc-heading">
+        <code>Regressor</code>
 
 
 </h2>
 
-    <div class="doc doc-contents ">
 
+  <div class="doc doc-contents ">
+
+  
       <p>Gaussian process regressor class</p>
+<p>Author: Christian Elias Anderssen Dalan <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
       <hr />
 <p>kernel:
 Specifies the type of covarince function we want for our regressor. 
@@ -679,7 +850,567 @@ Training data inputs, also called features</p>
 Training data outputs, also called labels</p>
 
 
+        <details class="quote">
+          <summary>Source code in <code>btjenesten/gpr.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Regressor</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gaussian process regressor class</span>
 
+<span class="sd">    Author: Christian Elias Anderssen Dalan &lt;ceadyy@gmail.com&gt;</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+<span class="sd">    kernel:</span>
+<span class="sd">    Specifies the type of covarince function we want for our regressor. </span>
+<span class="sd">    If none is provided the default is the radial basis function</span>
+
+<span class="sd">    training_data_X: </span>
+<span class="sd">    Training data inputs, also called features</span>
+
+<span class="sd">    training_data_Y:</span>
+<span class="sd">    Training data outputs, also called labels</span>
+
+<span class="sd">    params:</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">training_data_X</span><span class="p">,</span> <span class="n">training_data_Y</span><span class="p">,</span> <span class="n">kernel</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">normalize</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">normalize_log</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">kernel</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span> <span class="o">=</span> <span class="n">Kernel</span><span class="p">(</span><span class="n">RBF</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span> <span class="o">=</span> <span class="n">Kernel</span><span class="p">(</span><span class="n">kernel</span><span class="p">)</span>
+
+
+
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Expected 2D array. If you only have one feature reshape training data using array.reshape(-1, 1)&quot;</span>
+        <span class="k">assert</span> <span class="n">training_data_X</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">msg</span>
+
+        <span class="k">if</span> <span class="n">normalize</span><span class="p">:</span>
+            <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Normalize X and Y data</span>
+
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">recover</span> <span class="o">=</span> <span class="n">normalize_training_data_x</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">normalization_factor_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">training_data_Y</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span> <span class="o">=</span> <span class="n">training_data_Y</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">normalization_factor_y</span>
+
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">recover</span> <span class="o">=</span> <span class="n">no_normalization</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">normalization_factor_y</span> <span class="o">=</span> <span class="mf">1.0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span> <span class="o">=</span> <span class="n">training_data_X</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span> <span class="o">=</span> <span class="n">training_data_Y</span>
+
+        <span class="k">if</span> <span class="n">normalize_log</span><span class="p">:</span>
+            <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Normalize X and Y data</span>
+
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">recover</span> <span class="o">=</span> <span class="n">normalize_training_data_x_log</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">normalization_factor_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">training_data_Y</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span> <span class="o">=</span> <span class="n">training_data_Y</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">normalization_factor_y</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># </span>
+
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_data_X</span><span class="p">,</span> <span class="n">training_data_X</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">training_data_Y</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">return_variance</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Predicts output values for some input data given a set of training data </span>
+
+<span class="sd">        Author: Christian Elias Anderssen Dalan &lt;ceadyy@gmail.com&gt;</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">        -----------</span>
+<span class="sd">        input_data_X:</span>
+<span class="sd">        Input features that the gpr will evaluate.</span>
+
+<span class="sd">        training_data_X:</span>
+<span class="sd">        training data inputs.</span>
+
+<span class="sd">        training_data_Y:</span>
+<span class="sd">        training data outputs.</span>
+
+<span class="sd">        return_variance:</span>
+<span class="sd">        Returns variance for each prediction if this is true</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">        -----------</span>
+<span class="sd">        predicted_y:</span>
+<span class="sd">        Predicted output data given cooresponding input_data_X and a set of training data</span>
+<span class="sd">        inputs and outputs (training_data_X, training_data_Y)</span>
+
+<span class="sd">        predicted_variance:</span>
+<span class="sd">        Predicted variance for each point of predicted output.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">training_data_X</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">training_data_Y</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">K_11</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+            <span class="n">K_12</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+            <span class="n">K_21</span> <span class="o">=</span> <span class="n">K_12</span><span class="o">.</span><span class="n">T</span>
+            <span class="n">K_22</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">K_11</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">),</span> <span class="s2">&quot;Singular matrix. Training data might have duplicates.&quot;</span>
+            <span class="n">KT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">K_11</span><span class="p">,</span> <span class="n">K_12</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+
+            <span class="n">predicted_y</span> <span class="o">=</span> <span class="n">KT</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">K_11</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+            <span class="n">K_12</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+            <span class="n">K_21</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+            <span class="n">K_22</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+
+            <span class="k">assert</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">K_11</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">),</span> <span class="s2">&quot;Singular matrix. Training data might have duplicates.&quot;</span>
+            <span class="n">KT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">K_11</span><span class="p">,</span> <span class="n">K_12</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+
+            <span class="n">predicted_y</span> <span class="o">=</span> <span class="n">KT</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">training_data_Y</span><span class="p">)</span>
+
+        <span class="n">predicted_y</span> <span class="o">=</span> <span class="n">predicted_y</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">normalization_factor_y</span>
+
+        <span class="k">if</span> <span class="n">return_variance</span><span class="p">:</span>
+            <span class="n">predicted_variance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">K_22</span> <span class="o">-</span> <span class="n">KT</span> <span class="o">@</span> <span class="n">K_12</span><span class="p">)</span>
+
+            <span class="n">y_var_negative</span> <span class="o">=</span> <span class="n">predicted_variance</span> <span class="o">&lt;</span> <span class="mi">0</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">y_var_negative</span><span class="p">):</span>
+                <span class="n">predicted_variance</span><span class="o">.</span><span class="n">setflags</span><span class="p">(</span><span class="n">write</span><span class="o">=</span><span class="s2">&quot;True&quot;</span><span class="p">)</span>
+                <span class="n">predicted_variance</span><span class="p">[</span><span class="n">y_var_negative</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="k">return</span> <span class="n">predicted_y</span><span class="p">,</span> <span class="n">predicted_variance</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">predicted_y</span>
+
+    <span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_data_X</span><span class="p">,</span> <span class="n">input_data_Y</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the average and maximum error of our predict method.</span>
+
+<span class="sd">        Author: Christian Elias Anderssen Dalan &lt;ceadyy@gmail.com&gt;</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">        -----------</span>
+<span class="sd">        input_data_X:</span>
+<span class="sd">        input data that the gpr will predict corresponding output data to.</span>
+
+<span class="sd">        input_data_Y:</span>
+<span class="sd">        Corresponding true ouput data for input_data_X.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">        --------</span>
+<span class="sd">        avg_error - the average error between the predicted values and the true values</span>
+<span class="sd">        max_error - the maximum error between the predicted values and the true values</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">predicted_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">)</span>
+        <span class="n">avg_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">predicted_y</span> <span class="o">-</span> <span class="n">input_data_Y</span><span class="p">))</span>
+        <span class="n">max_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">predicted_y</span> <span class="o">-</span> <span class="n">input_data_Y</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">avg_error</span><span class="p">,</span> <span class="n">max_error</span>
+
+    <span class="k">def</span> <span class="nf">aquisition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">minimize_prediction</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">x0</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s2">&quot;COBYLA&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the point at which our model function is predicted to have the highest value.</span>
+
+<span class="sd">        Author: Christian Elias Anderssen Dalan &lt;ceadyy@gmail.com&gt;</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">        -----------</span>
+<span class="sd">        minimize_prediction:</span>
+<span class="sd">        If your task is to minimize some model function, this parameter is True. If your task is to maximize the model function</span>
+<span class="sd">        this parameter is False.</span>
+
+<span class="sd">        l:</span>
+<span class="sd">        Exploration parameter. Scales how much the standard deviation should impact the function value. l = 1</span>
+<span class="sd">        means that the function maximized/minimized equals predicted value +/- the standard deviation.</span>
+
+<span class="sd">        x0:</span>
+<span class="sd">        Initial guess. If not specified it will use the point at which the training data is the largest/smallest.</span>
+
+<span class="sd">        delta:</span>
+<span class="sd">        Hyperparameter that tunes UCB around measured datapoints.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">        --------</span>
+<span class="sd">        p - The predicted point at which an evaluation would yield the highest/lowest value</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">minimize_prediction</span><span class="p">:</span> <span class="c1">#Minimization process</span>
+            <span class="k">if</span> <span class="n">x0</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">x0_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span><span class="p">))</span>
+
+                <span class="n">x0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">[</span><span class="n">x0_index</span><span class="p">]</span>
+
+            <span class="n">objective_function</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">predict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span> <span class="p">:</span> <span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">std_x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">predict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">return_variance</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)[</span><span class="mi">1</span><span class="p">])))</span>
+            <span class="n">objective_noise</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">std</span> <span class="o">=</span> <span class="n">std_x</span> <span class="p">:</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">delta</span> <span class="o">+</span> <span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+            <span class="n">UCB</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">exploit</span> <span class="o">=</span> <span class="n">objective_function</span><span class="p">,</span> <span class="n">explore</span> <span class="o">=</span> <span class="n">objective_noise</span><span class="p">:</span> <span class="n">exploit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">l</span><span class="o">*</span><span class="n">explore</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+
+            <span class="k">def</span> <span class="nf">UCB</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="n">UCB</span><span class="p">):</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+            <span class="n">minimization</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">UCB</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="n">method</span><span class="p">)</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">minimization</span><span class="o">.</span><span class="n">x</span>
+            <span class="k">return</span> <span class="n">p</span>
+
+        <span class="k">else</span><span class="p">:</span> <span class="c1">#Maximization process</span>
+            <span class="k">if</span> <span class="n">x0</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">x0_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span><span class="p">))</span>
+
+                <span class="n">x0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">[</span><span class="n">x0_index</span><span class="p">]</span>
+
+            <span class="n">objective_function</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">predict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span> <span class="p">:</span> <span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">std_x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">predict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">return_variance</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)[</span><span class="mi">1</span><span class="p">])))</span>
+            <span class="n">objective_noise</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">std</span> <span class="o">=</span> <span class="n">std_x</span> <span class="p">:</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">delta</span> <span class="o">+</span> <span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+            <span class="n">UCB</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">exploit</span> <span class="o">=</span> <span class="n">objective_function</span><span class="p">,</span> <span class="n">explore</span> <span class="o">=</span> <span class="n">objective_noise</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="n">exploit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">l</span><span class="o">*</span><span class="n">explore</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+            <span class="k">def</span> <span class="nf">UCB</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="n">UCB</span><span class="p">):</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+            <span class="n">minimization</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">UCB</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="n">method</span><span class="p">)</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">minimization</span><span class="o">.</span><span class="n">x</span>
+            <span class="k">return</span> <span class="n">p</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_X</span><span class="p">,</span> <span class="n">new_Y</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Updates the training data in accordance to some newly measured data.</span>
+
+<span class="sd">        Author: Christian Elias Anderssen Dalan &lt;ceadyy@gmail.com&gt;</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">        -----------</span>
+<span class="sd">        new_X:</span>
+<span class="sd">        Set of new features that have been measured.</span>
+
+<span class="sd">        new_Y:</span>
+<span class="sd">        Corresponding set of labels to new_X.</span>
+
+<span class="sd">        tol:</span>
+<span class="sd">        Tolerance which the training data set can differ from new points. If this is too low you may encounter singular </span>
+<span class="sd">        covariance matrices.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">new_Y</span><span class="p">)</span> <span class="ow">is</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="s2">&quot;Data error!!!!! Needs to be array.&quot;</span>
+        <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">new_X</span><span class="p">)</span> <span class="ow">is</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="s2">&quot;Data error!!!!! Needs to be array.&quot;</span>
+
+        <span class="k">for</span> <span class="n">measurement</span> <span class="ow">in</span> <span class="n">new_X</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">)):</span>
+                <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">measurement</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">tol</span><span class="p">):</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The model has most likely converged! </span><span class="si">{</span><span class="n">measurement</span><span class="si">}</span><span class="s2"> already exists in the training set.&quot;</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="kc">True</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        old_X_shape = self.training_data_X.shape</span>
+<span class="sd">        old_Y_shape = len(self.training_data_Y)</span>
+
+<span class="sd">        new_X_shape = np.array(self.training_data_X.shape)</span>
+<span class="sd">        new_Y_shape = len(new_Y)</span>
+
+<span class="sd">        new_X_shape[0] += new_X.shape[0]</span>
+<span class="sd">        new_Y_shape += len(new_Y)</span>
+
+<span class="sd">        new_training_data_X = np.zeros(new_X_shape)</span>
+<span class="sd">        new_training_data_Y = np.zeros(new_Y_shape)</span>
+
+<span class="sd">        new_training_data_X[:-old_X_shape.shape[0]] = self.training_data_X</span>
+<span class="sd">        new_training_data_X[-new_X.shape[0]:] = new_X </span>
+
+<span class="sd">        new_training_data_Y[:-old_Y_shape] = self.training_data_Y</span>
+<span class="sd">        new_training_data_Y[-new_Y_shape:] = new_Y</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">#print(&quot;X1 shape &quot;,self.training_data_X.shape)</span>
+        <span class="c1">#print(&quot;X2 shape &quot;,.shape)</span>
+        <span class="n">new_X</span> <span class="o">=</span> <span class="n">new_X</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="n">new_training_data_X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">new_X</span><span class="p">)))</span>
+        <span class="n">new_training_data_Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span><span class="p">,</span> <span class="n">new_Y</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">normalization_factor_y</span><span class="p">))</span>
+
+        <span class="c1">#indexes = np.argsort(new_training_data_X)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span> <span class="o">=</span> <span class="n">new_training_data_X</span><span class="c1">#[indexes]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span> <span class="o">=</span> <span class="n">new_training_data_Y</span><span class="c1">#[indexes]</span>
+
+        <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
 
   <div class="doc doc-children">
 
@@ -691,20 +1422,183 @@ Training data outputs, also called labels</p>
 
 
 
-
-  <div class="doc doc-object doc-method">
-
+<div class="doc doc-object doc-function">
 
 
-<h3 class="doc doc-heading" id="btjenesten.gpr.Regressor.predict">
-<code class="highlight language-python"><span class="n">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_data_X</span><span class="p">,</span> <span class="n">training_data_X</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">training_data_Y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">return_covariance</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
+<h3 id="btjenesten.gpr.Regressor.aquisition" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">aquisition</span><span class="p">(</span><span class="n">minimize_prediction</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;COBYLA&#39;</span><span class="p">)</span></code>
 
 </h3>
 
-    <div class="doc doc-contents ">
 
+  <div class="doc doc-contents ">
+  
+      <p>Returns the point at which our model function is predicted to have the highest value.</p>
+<p>Author: Christian Elias Anderssen Dalan <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+      <hr />
+<p>minimize_prediction:
+If your task is to minimize some model function, this parameter is True. If your task is to maximize the model function
+this parameter is False.</p>
+<p>l:
+Exploration parameter. Scales how much the standard deviation should impact the function value. l = 1
+means that the function maximized/minimized equals predicted value +/- the standard deviation.</p>
+<p>x0:
+Initial guess. If not specified it will use the point at which the training data is the largest/smallest.</p>
+<p>delta:
+Hyperparameter that tunes UCB around measured datapoints.</p>
+      <hr />
+<p>p - The predicted point at which an evaluation would yield the highest/lowest value</p>
+
+      <details class="quote">
+        <summary>Source code in <code>btjenesten/gpr.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">aquisition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">minimize_prediction</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">x0</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s2">&quot;COBYLA&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns the point at which our model function is predicted to have the highest value.</span>
+
+<span class="sd">    Author: Christian Elias Anderssen Dalan &lt;ceadyy@gmail.com&gt;</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+<span class="sd">    minimize_prediction:</span>
+<span class="sd">    If your task is to minimize some model function, this parameter is True. If your task is to maximize the model function</span>
+<span class="sd">    this parameter is False.</span>
+
+<span class="sd">    l:</span>
+<span class="sd">    Exploration parameter. Scales how much the standard deviation should impact the function value. l = 1</span>
+<span class="sd">    means that the function maximized/minimized equals predicted value +/- the standard deviation.</span>
+
+<span class="sd">    x0:</span>
+<span class="sd">    Initial guess. If not specified it will use the point at which the training data is the largest/smallest.</span>
+
+<span class="sd">    delta:</span>
+<span class="sd">    Hyperparameter that tunes UCB around measured datapoints.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    p - The predicted point at which an evaluation would yield the highest/lowest value</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">minimize_prediction</span><span class="p">:</span> <span class="c1">#Minimization process</span>
+        <span class="k">if</span> <span class="n">x0</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x0_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span><span class="p">))</span>
+
+            <span class="n">x0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">[</span><span class="n">x0_index</span><span class="p">]</span>
+
+        <span class="n">objective_function</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">predict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span> <span class="p">:</span> <span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">std_x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">predict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">return_variance</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)[</span><span class="mi">1</span><span class="p">])))</span>
+        <span class="n">objective_noise</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">std</span> <span class="o">=</span> <span class="n">std_x</span> <span class="p">:</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">delta</span> <span class="o">+</span> <span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="n">UCB</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">exploit</span> <span class="o">=</span> <span class="n">objective_function</span><span class="p">,</span> <span class="n">explore</span> <span class="o">=</span> <span class="n">objective_noise</span><span class="p">:</span> <span class="n">exploit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">l</span><span class="o">*</span><span class="n">explore</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+
+        <span class="k">def</span> <span class="nf">UCB</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="n">UCB</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="n">minimization</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">UCB</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="n">method</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">minimization</span><span class="o">.</span><span class="n">x</span>
+        <span class="k">return</span> <span class="n">p</span>
+
+    <span class="k">else</span><span class="p">:</span> <span class="c1">#Maximization process</span>
+        <span class="k">if</span> <span class="n">x0</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x0_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span><span class="p">))</span>
+
+            <span class="n">x0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">[</span><span class="n">x0_index</span><span class="p">]</span>
+
+        <span class="n">objective_function</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">predict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span> <span class="p">:</span> <span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">std_x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">predict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">return_variance</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)[</span><span class="mi">1</span><span class="p">])))</span>
+        <span class="n">objective_noise</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">std</span> <span class="o">=</span> <span class="n">std_x</span> <span class="p">:</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">delta</span> <span class="o">+</span> <span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="n">UCB</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">exploit</span> <span class="o">=</span> <span class="n">objective_function</span><span class="p">,</span> <span class="n">explore</span> <span class="o">=</span> <span class="n">objective_noise</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="n">exploit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">l</span><span class="o">*</span><span class="n">explore</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">def</span> <span class="nf">UCB</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="n">UCB</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="n">minimization</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">UCB</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="n">method</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">minimization</span><span class="o">.</span><span class="n">x</span>
+        <span class="k">return</span> <span class="n">p</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="btjenesten.gpr.Regressor.predict" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">predict</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">,</span> <span class="n">training_data_X</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">training_data_Y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">return_variance</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
       <p>Predicts output values for some input data given a set of training data </p>
+<p>Author: Christian Elias Anderssen Dalan <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
       <hr />
 <p>input_data_X:
 Input features that the gpr will evaluate.</p>
@@ -721,11 +1615,76 @@ inputs and outputs (training_data_X, training_data_Y)</p>
 <p>predicted_variance:
 Predicted variance for each point of predicted output.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>btjenesten/gpr.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_data_X</span><span class="p">,</span> <span class="n">training_data_X</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">training_data_Y</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">return_covariance</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+      <details class="quote">
+        <summary>Source code in <code>btjenesten/gpr.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_data_X</span><span class="p">,</span> <span class="n">training_data_X</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">training_data_Y</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">return_variance</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Predicts output values for some input data given a set of training data </span>
+
+<span class="sd">    Author: Christian Elias Anderssen Dalan &lt;ceadyy@gmail.com&gt;</span>
 
 <span class="sd">    Parameters:</span>
 <span class="sd">    -----------</span>
@@ -750,70 +1709,100 @@ Predicted variance for each point of predicted output.</p>
 <span class="sd">    predicted_variance:</span>
 <span class="sd">    Predicted variance for each point of predicted output.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">training_data_X</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">training_data_Y</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">K_11</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">)</span>
-        <span class="n">K_12</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">,</span> <span class="n">input_data_X</span><span class="p">)</span>
-        <span class="n">K_21</span> <span class="o">=</span> <span class="n">K_12</span><span class="o">.</span><span class="n">T</span>
-        <span class="n">K_22</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">,</span> <span class="n">input_data_X</span><span class="p">)</span>
 
+    <span class="k">if</span> <span class="n">training_data_X</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">training_data_Y</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">K_11</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">K_12</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">K_21</span> <span class="o">=</span> <span class="n">K_12</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">K_22</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">K_11</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">),</span> <span class="s2">&quot;Singular matrix. Training data might have duplicates.&quot;</span>
         <span class="n">KT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">K_11</span><span class="p">,</span> <span class="n">K_12</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
 
         <span class="n">predicted_y</span> <span class="o">=</span> <span class="n">KT</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">return_covariance</span><span class="p">:</span>
-            <span class="n">predicted_covariance_matrix</span> <span class="o">=</span> <span class="n">K_22</span> <span class="o">-</span> <span class="n">KT</span> <span class="o">@</span> <span class="n">K_12</span>
-            <span class="k">return</span> <span class="n">predicted_y</span><span class="p">,</span> <span class="n">predicted_covariance_matrix</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">predicted_y</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">K_11</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">,</span> <span class="n">training_data_X</span><span class="p">)</span>
-        <span class="n">K_12</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">,</span> <span class="n">input_data_X</span><span class="p">)</span>
-        <span class="n">K_21</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">,</span> <span class="n">training_data_X</span><span class="p">)</span>
-        <span class="n">K_22</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">,</span> <span class="n">input_data_X</span><span class="p">)</span>
+        <span class="n">K_11</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">K_12</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">K_21</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">training_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">K_22</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
 
+        <span class="k">assert</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">K_11</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">),</span> <span class="s2">&quot;Singular matrix. Training data might have duplicates.&quot;</span>
         <span class="n">KT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">K_11</span><span class="p">,</span> <span class="n">K_12</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
 
         <span class="n">predicted_y</span> <span class="o">=</span> <span class="n">KT</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">training_data_Y</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">return_covariance</span><span class="p">:</span>
-            <span class="n">predicted_covariance_matrix</span> <span class="o">=</span> <span class="n">K_22</span> <span class="o">-</span> <span class="n">KT</span> <span class="o">@</span> <span class="n">K_12</span>
-            <span class="k">return</span> <span class="n">predicted_y</span><span class="p">,</span> <span class="n">predicted_covariance_matrix</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">predicted_y</span>
-</code></pre></div>
-        </details>
-    </div>
+    <span class="n">predicted_y</span> <span class="o">=</span> <span class="n">predicted_y</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">normalization_factor_y</span>
 
+    <span class="k">if</span> <span class="n">return_variance</span><span class="p">:</span>
+        <span class="n">predicted_variance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">K_22</span> <span class="o">-</span> <span class="n">KT</span> <span class="o">@</span> <span class="n">K_12</span><span class="p">)</span>
+
+        <span class="n">y_var_negative</span> <span class="o">=</span> <span class="n">predicted_variance</span> <span class="o">&lt;</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">y_var_negative</span><span class="p">):</span>
+            <span class="n">predicted_variance</span><span class="o">.</span><span class="n">setflags</span><span class="p">(</span><span class="n">write</span><span class="o">=</span><span class="s2">&quot;True&quot;</span><span class="p">)</span>
+            <span class="n">predicted_variance</span><span class="p">[</span><span class="n">y_var_negative</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">return</span> <span class="n">predicted_y</span><span class="p">,</span> <span class="n">predicted_variance</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">predicted_y</span>
+</code></pre></div></td></tr></table></div>
+      </details>
   </div>
 
+</div>
+
+<div class="doc doc-object doc-function">
 
 
-  <div class="doc doc-object doc-method">
 
-
-
-<h3 class="doc doc-heading" id="btjenesten.gpr.Regressor.score">
-<code class="highlight language-python"><span class="n">score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_data_X</span><span class="p">,</span> <span class="n">input_data_Y</span><span class="p">)</span></code>
-
+<h3 id="btjenesten.gpr.Regressor.score" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">score</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">,</span> <span class="n">input_data_Y</span><span class="p">)</span></code>
 
 </h3>
 
-    <div class="doc doc-contents ">
 
-      <p>Returns the average error of our predict method.</p>
+  <div class="doc doc-contents ">
+  
+      <p>Returns the average and maximum error of our predict method.</p>
+<p>Author: Christian Elias Anderssen Dalan <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
       <hr />
 <p>input_data_X:
 input data that the gpr will predict corresponding output data to.</p>
 <p>input_data_Y:
 Corresponding true ouput data for input_data_X.</p>
       <hr />
-<p>avg_error - the average error between the predicted values and the true values</p>
+<p>avg_error - the average error between the predicted values and the true values
+max_error - the maximum error between the predicted values and the true values</p>
 
-        <details class="quote">
-          <summary>Source code in <code>btjenesten/gpr.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_data_X</span><span class="p">,</span> <span class="n">input_data_Y</span><span class="p">):</span>
+      <details class="quote">
+        <summary>Source code in <code>btjenesten/gpr.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_data_X</span><span class="p">,</span> <span class="n">input_data_Y</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Returns the average error of our predict method.</span>
+<span class="sd">    Returns the average and maximum error of our predict method.</span>
+
+<span class="sd">    Author: Christian Elias Anderssen Dalan &lt;ceadyy@gmail.com&gt;</span>
 
 <span class="sd">    Parameters:</span>
 <span class="sd">    -----------</span>
@@ -826,48 +1815,377 @@ Corresponding true ouput data for input_data_X.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">    --------</span>
 <span class="sd">    avg_error - the average error between the predicted values and the true values</span>
+<span class="sd">    max_error - the maximum error between the predicted values and the true values</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">predicted_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_data_X</span><span class="p">)</span>
     <span class="n">avg_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">predicted_y</span> <span class="o">-</span> <span class="n">input_data_Y</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">avg_error</span>
-</code></pre></div>
-        </details>
-    </div>
+    <span class="n">max_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">predicted_y</span> <span class="o">-</span> <span class="n">input_data_Y</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">avg_error</span><span class="p">,</span> <span class="n">max_error</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="btjenesten.gpr.Regressor.update" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="n">new_X</span><span class="p">,</span> <span class="n">new_Y</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Updates the training data in accordance to some newly measured data.</p>
+<p>Author: Christian Elias Anderssen Dalan <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#99;&#101;&#97;&#100;&#121;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+      <hr />
+<p>new_X:
+Set of new features that have been measured.</p>
+<p>new_Y:
+Corresponding set of labels to new_X.</p>
+<p>tol:
+Tolerance which the training data set can differ from new points. If this is too low you may encounter singular 
+covariance matrices.</p>
+
+      <details class="quote">
+        <summary>Source code in <code>btjenesten/gpr.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_X</span><span class="p">,</span> <span class="n">new_Y</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Updates the training data in accordance to some newly measured data.</span>
+
+<span class="sd">    Author: Christian Elias Anderssen Dalan &lt;ceadyy@gmail.com&gt;</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+<span class="sd">    new_X:</span>
+<span class="sd">    Set of new features that have been measured.</span>
+
+<span class="sd">    new_Y:</span>
+<span class="sd">    Corresponding set of labels to new_X.</span>
+
+<span class="sd">    tol:</span>
+<span class="sd">    Tolerance which the training data set can differ from new points. If this is too low you may encounter singular </span>
+<span class="sd">    covariance matrices.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">new_Y</span><span class="p">)</span> <span class="ow">is</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="s2">&quot;Data error!!!!! Needs to be array.&quot;</span>
+    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">new_X</span><span class="p">)</span> <span class="ow">is</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="s2">&quot;Data error!!!!! Needs to be array.&quot;</span>
+
+    <span class="k">for</span> <span class="n">measurement</span> <span class="ow">in</span> <span class="n">new_X</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">measurement</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">tol</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The model has most likely converged! </span><span class="si">{</span><span class="n">measurement</span><span class="si">}</span><span class="s2"> already exists in the training set.&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="kc">True</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    old_X_shape = self.training_data_X.shape</span>
+<span class="sd">    old_Y_shape = len(self.training_data_Y)</span>
+
+<span class="sd">    new_X_shape = np.array(self.training_data_X.shape)</span>
+<span class="sd">    new_Y_shape = len(new_Y)</span>
+
+<span class="sd">    new_X_shape[0] += new_X.shape[0]</span>
+<span class="sd">    new_Y_shape += len(new_Y)</span>
+
+<span class="sd">    new_training_data_X = np.zeros(new_X_shape)</span>
+<span class="sd">    new_training_data_Y = np.zeros(new_Y_shape)</span>
+
+<span class="sd">    new_training_data_X[:-old_X_shape.shape[0]] = self.training_data_X</span>
+<span class="sd">    new_training_data_X[-new_X.shape[0]:] = new_X </span>
+
+<span class="sd">    new_training_data_Y[:-old_Y_shape] = self.training_data_Y</span>
+<span class="sd">    new_training_data_Y[-new_Y_shape:] = new_Y</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#print(&quot;X1 shape &quot;,self.training_data_X.shape)</span>
+    <span class="c1">#print(&quot;X2 shape &quot;,.shape)</span>
+    <span class="n">new_X</span> <span class="o">=</span> <span class="n">new_X</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="n">new_training_data_X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">new_X</span><span class="p">)))</span>
+    <span class="n">new_training_data_Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span><span class="p">,</span> <span class="n">new_Y</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">normalization_factor_y</span><span class="p">))</span>
+
+    <span class="c1">#indexes = np.argsort(new_training_data_X)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">training_data_X</span> <span class="o">=</span> <span class="n">new_training_data_X</span><span class="c1">#[indexes]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">training_data_Y</span> <span class="o">=</span> <span class="n">new_training_data_Y</span><span class="c1">#[indexes]</span>
+
+    <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
 
   </div>
 
+  </div>
 
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="btjenesten.gpr.no_normalization" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">no_normalization</span><span class="p">(</span><span class="n">training_data</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>generate functions which essentially does nothing</p>
+<p>Author: No-one</p>
+
+      <details class="quote">
+        <summary>Source code in <code>btjenesten/gpr.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">no_normalization</span><span class="p">(</span><span class="n">training_data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    generate functions which essentially does nothing</span>
+
+<span class="sd">    Author: No-one</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">training_data</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">training_data</span>
+
+    <span class="k">def</span> <span class="nf">recover</span><span class="p">(</span><span class="n">training_data</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">training_data</span>
+
+    <span class="k">return</span> <span class="n">normalize</span><span class="p">,</span> <span class="n">recover</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="btjenesten.gpr.normalize_training_data_x" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">normalize_training_data_x</span><span class="p">(</span><span class="n">training_data</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>generate functions to normalize and recover unnormalized
+training data</p>
+<p>Author: Audun</p>
+<p>(more detailed explanation is required)</p>
+
+      <details class="quote">
+        <summary>Source code in <code>btjenesten/gpr.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">normalize_training_data_x</span><span class="p">(</span><span class="n">training_data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    generate functions to normalize and recover unnormalized</span>
+<span class="sd">    training data</span>
+
+<span class="sd">    Author: Audun</span>
+
+<span class="sd">    (more detailed explanation is required)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mean</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">training_data</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span><span class="mi">0</span> <span class="p">)</span>
+    <span class="n">bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">training_data</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">training_data</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">training_data</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span> <span class="n">mean</span><span class="p">,</span> <span class="n">bound</span> <span class="o">=</span> <span class="n">bound</span><span class="p">):</span>
+        <span class="n">training_data_normalized</span> <span class="o">=</span> <span class="n">training_data</span> <span class="o">-</span> <span class="n">mean</span><span class="p">[</span><span class="kc">None</span><span class="p">,:]</span>
+        <span class="n">training_data_normalized</span> <span class="o">*=</span> <span class="p">(</span><span class="mf">.5</span><span class="o">*</span><span class="n">bound</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:])</span><span class="o">**-</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">training_data_normalized</span>
+
+    <span class="k">def</span> <span class="nf">recover</span><span class="p">(</span><span class="n">training_data_normalized</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span> <span class="n">mean</span><span class="p">,</span> <span class="n">bound</span> <span class="o">=</span> <span class="n">bound</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">training_data_normalized</span><span class="o">*</span><span class="p">(</span><span class="mf">.5</span><span class="o">*</span><span class="n">bound</span><span class="p">[</span><span class="kc">None</span><span class="p">,:])</span> <span class="o">+</span> <span class="n">mean</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:]</span>
+
+    <span class="k">return</span> <span class="n">normalize</span><span class="p">,</span> <span class="n">recover</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="btjenesten.gpr.normalize_training_data_x_log" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">normalize_training_data_x_log</span><span class="p">(</span><span class="n">training_data</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>generate functions to normalize and recover unnormalized
+training data</p>
+<p>Author: Audun</p>
+<p>(more detailed explanation is required)</p>
+
+      <details class="quote">
+        <summary>Source code in <code>btjenesten/gpr.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">normalize_training_data_x_log</span><span class="p">(</span><span class="n">training_data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    generate functions to normalize and recover unnormalized</span>
+<span class="sd">    training data</span>
+
+<span class="sd">    Author: Audun</span>
+
+<span class="sd">    (more detailed explanation is required)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#mean  = np.mean(training_data, axis =0 )</span>
+    <span class="n">min_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">training_data</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span><span class="mi">0</span> <span class="p">)</span>  <span class="o">-</span> <span class="mf">1e-3</span>
+    <span class="n">bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">training_data</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">training_data</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+
+
+
+    <span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">training_data</span><span class="p">,</span> <span class="n">min_</span><span class="o">=</span> <span class="n">min_</span><span class="p">,</span> <span class="n">bound</span> <span class="o">=</span> <span class="n">bound</span><span class="p">):</span>
+        <span class="n">training_data_normalized</span> <span class="o">=</span> <span class="n">training_data</span> 
+
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">training_data_normalized</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">recover</span><span class="p">(</span><span class="n">training_data_normalized</span><span class="p">,</span> <span class="n">min_</span><span class="o">=</span> <span class="n">min_</span><span class="p">,</span> <span class="n">bound</span> <span class="o">=</span> <span class="n">bound</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">training_data_normalized</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">normalize</span><span class="p">,</span> <span class="n">recover</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
 
 
 
   </div>
 
-    </div>
-
   </div>
 
+</div>
 
+<div class="doc doc-object doc-module">
 
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-module">
 
 <a id="btjenesten.kernels"></a>
-    <div class="doc doc-contents first">
+  <div class="doc doc-contents first">
 
-
-
+  
 
   <div class="doc doc-children">
 
@@ -878,18 +2196,19 @@ Corresponding true ouput data for input_data_X.</p>
 
 
 
-  <div class="doc doc-object doc-function">
+
+<div class="doc doc-object doc-function">
 
 
 
-<h2 class="doc doc-heading" id="btjenesten.kernels.Constant">
+<h2 id="btjenesten.kernels.Constant" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">Constant</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span></code>
-
 
 </h2>
 
-    <div class="doc doc-contents ">
 
+  <div class="doc doc-contents ">
+  
       <p>Kernel that returns a constant covariance value between <span class="arithmatex">\(x_i\)</span> and <span class="arithmatex">\(x_j\)</span>
 Useful if all values depend on eachother equally.</p>
       <hr />
@@ -898,9 +2217,26 @@ Useful if all values depend on eachother equally.</p>
 <p>k: constant that determines the covariance.</p>
       <p>A matrix with the same shape as our input data. All matrix elements have the value k.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>btjenesten/kernels.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">Constant</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">):</span>
+      <details class="quote">
+        <summary>Source code in <code>btjenesten/kernels.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">Constant</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Kernel that returns a constant covariance value between $x_i$ and $x_j$</span>
 <span class="sd">    Useful if all values depend on eachother equally.</span>
@@ -918,26 +2254,24 @@ Useful if all values depend on eachother equally.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">X1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="o">*</span><span class="n">k</span>
-</code></pre></div>
-        </details>
-    </div>
-
+</code></pre></div></td></tr></table></div>
+      </details>
   </div>
 
+</div>
+
+<div class="doc doc-object doc-function">
 
 
-  <div class="doc doc-object doc-function">
 
-
-
-<h2 class="doc doc-heading" id="btjenesten.kernels.Funny_trigonometric">
+<h2 id="btjenesten.kernels.Funny_trigonometric" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">Funny_trigonometric</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></code>
-
 
 </h2>
 
-    <div class="doc doc-contents ">
 
+  <div class="doc doc-contents ">
+  
       <p>Kernel that I made only for fun. May work for extravagant datasets</p>
       <hr />
 <p>X1: Dataset 1</p>
@@ -945,9 +2279,25 @@ Useful if all values depend on eachother equally.</p>
 <p>k: constant that determines the frequency of the trigonometric functions.</p>
       <p>A covariance matrix that might be a bit crazy.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>btjenesten/kernels.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">Funny_trigonometric</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+      <details class="quote">
+        <summary>Source code in <code>btjenesten/kernels.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">Funny_trigonometric</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Kernel that I made only for fun. May work for extravagant datasets</span>
 
@@ -964,84 +2314,114 @@ Useful if all values depend on eachother equally.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="o">-</span><span class="n">k</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="kc">None</span><span class="p">,:])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="o">-</span><span class="n">k</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="kc">None</span><span class="p">,:])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-        </details>
-    </div>
-
+</code></pre></div></td></tr></table></div>
+      </details>
   </div>
 
+</div>
+
+<div class="doc doc-object doc-function">
 
 
-  <div class="doc doc-object doc-function">
 
-
-
-<h2 class="doc doc-heading" id="btjenesten.kernels.RBF">
-<code class="highlight language-python"><span class="n">RBF</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></code>
-
+<h2 id="btjenesten.kernels.RBF" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">RBF</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">]))</span></code>
 
 </h2>
 
-    <div class="doc doc-contents ">
 
+  <div class="doc doc-contents ">
+  
       <p>Radial basis function of the form:
 $$
 e^{-l * d(X_i,X_j)}
 $$</p>
       <hr />
 <p>X1: Dataset 1</p>
-<p>X2: Dataset 2</p>
-<p>l: Length scale parameter. 
+<p>X2: Dataset 2
+l: Length scale parameter. 
 Can be adjusted to adjust the covariance between <span class="arithmatex">\(x_i\)</span> and <span class="arithmatex">\(x_j\)</span>. 
-Increasing l will decrease the covariance, and vice verca.</p>
+Increasing l will decrease the covariance, and vice versa.</p>
       <hr />
 <p>A matrix with the same shape as our input data, where the elemets are:
-<span class="arithmatex">\(e^{-l*d(x_i, x_j)}\)</span> where <span class="arithmatex">\(d(x_i, x_j)\)</span> is the difference between element <span class="arithmatex">\(x_i\)</span> in X1
+<span class="arithmatex">\(e^{-l \cdot d(x_i, x_j)}\)</span> where <span class="arithmatex">\(d(x_i, x_j)\)</span> is the difference between element <span class="arithmatex">\(x_i\)</span> in X1
 and element <span class="arithmatex">\(x_j\)</span> in X2.</p>
 
-        <details class="quote">
-          <summary>Source code in <code>btjenesten/kernels.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">RBF</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+      <details class="quote">
+        <summary>Source code in <code>btjenesten/kernels.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">RBF</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">])):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Radial basis function of the form:</span>
 <span class="sd">    $$</span>
 <span class="sd">    e^{-l * d(X_i,X_j)}</span>
 <span class="sd">    $$</span>
-
 <span class="sd">    Parameters:</span>
 <span class="sd">    -----------</span>
 <span class="sd">    X1: Dataset 1</span>
 
 <span class="sd">    X2: Dataset 2</span>
-
 <span class="sd">    l: Length scale parameter. </span>
 <span class="sd">    Can be adjusted to adjust the covariance between $x_i$ and $x_j$. </span>
-<span class="sd">    Increasing l will decrease the covariance, and vice verca.</span>
+<span class="sd">    Increasing l will decrease the covariance, and vice versa.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">    -----------</span>
 <span class="sd">    A matrix with the same shape as our input data, where the elemets are:</span>
-<span class="sd">    $e^{-l*d(x_i, x_j)}$ where $d(x_i, x_j)$ is the difference between element $x_i$ in X1</span>
+<span class="sd">    $e^{-l \cdot d(x_i, x_j)}$ where $d(x_i, x_j)$ is the difference between element $x_i$ in X1</span>
 <span class="sd">    and element $x_j$ in X2.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">l</span><span class="o">*</span><span class="p">(</span><span class="n">X1</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">-</span> <span class="n">X2</span><span class="p">[</span><span class="kc">None</span><span class="p">,:])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-        </details>
-    </div>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="c1"># patch for scalar length parameter</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">l</span><span class="p">])</span>
+
+    <span class="n">ld</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:]</span><span class="o">*</span><span class="p">(</span><span class="n">X1</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">X1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="o">-</span><span class="mi">1</span><span class="p">)[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">-</span> <span class="n">X2</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">X2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="o">-</span><span class="mi">1</span><span class="p">)[</span><span class="kc">None</span><span class="p">,])</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">ld</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
 
   </div>
 
-
-
-
-
-
   </div>
 
-    </div>
+</div>
 
-  </div>
+
+
 
               
             </article>
@@ -1072,6 +2452,21 @@ and element <span class="arithmatex">\(x_j\)</span> in X2.</p>
         </a>
       
       
+        
+        <a href="../analysis-reference/" class="md-footer__link md-footer__link--next" aria-label="Next: analysis" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              analysis
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
     </nav>
   
   <div class="md-footer-meta md-typeset">
@@ -1094,10 +2489,11 @@ and element <span class="arithmatex">\(x_j\)</span> in X2.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a877e258.min.js"></script>
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
