@@ -1,6 +1,11 @@
-## Gaussian Process Regression tools (gpr)
+# gpr
 
-This module was developed by Elias Dalan in spring 2022.
+**Author**: Christian Elias Anderssen Dalan <ceadyy@gmail.com>,
+
+With the help of Audun Skau Hansen <a.s.hansen@kjemi.uio.no>
+
+April 2022
 
 ::: btjenesten.gpr
+
 ::: btjenesten.kernels
